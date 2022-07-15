@@ -20,7 +20,6 @@ public class Driver {
 
     private Driver() {
     }
-
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -35,7 +34,7 @@ public class Driver {
                 case "remote-chrome":
                     try {
                         // assign your grid server address
-                        String gridAddress = "52.90.101.317";
+                        String gridAddress = "184.73.146.22";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
@@ -44,9 +43,7 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
-
                 case "remote-firefox":
-
                     try {
                         // assign your grid server address
                         String gridAddress = "52.90.101.317";
@@ -74,7 +71,6 @@ public class Driver {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
                     break;
-
                 case "ie":
                     if (System.getProperty("os.name").toLowerCase().contains("mac")) {
                         throw new WebDriverException("Your operating system does not support the requested browser");
@@ -82,7 +78,6 @@ public class Driver {
                     WebDriverManager.iedriver().setup();
                     driver = new InternetExplorerDriver();
                     break;
-
                 case "edge":
                     if (System.getProperty("os.name").toLowerCase().contains("mac")) {
                         throw new WebDriverException("Your operating system does not support the requested browser");
@@ -90,7 +85,6 @@ public class Driver {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
-
                 case "safari":
                     if (System.getProperty("os.name").toLowerCase().contains("windows")) {
                         throw new WebDriverException("Your operating system does not support the requested browser");
@@ -100,7 +94,6 @@ public class Driver {
                     break;
             }
         }
-
         return driver;
     }
 

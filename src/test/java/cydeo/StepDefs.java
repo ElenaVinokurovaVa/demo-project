@@ -51,5 +51,4 @@ public class StepDefs {
         }
         Driver.closeDriver();
     }
-
 }

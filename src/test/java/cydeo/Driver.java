@@ -43,6 +43,7 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
+
                 case "remote-firefox":
                     try {
                         // assign your grid server address
